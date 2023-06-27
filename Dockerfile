@@ -7,7 +7,8 @@ LABEL maintainer="Dave Conroy (github.com/tiredofit)"
 ARG FREESCOUT_VERSION
 
 ENV FREESCOUT_VERSION=${FREESCOUT_VERSION:-"1.8.81"} \
-    FREESCOUT_REPO_URL=https://github.com/freescout-helpdesk/freescout \
+
+    FREESCOUT_REPO_URL=https://github.com/totake0224/freescout.git \
     NGINX_WEBROOT=/www/html \
     NGINX_SITE_ENABLED=freescout \
     PHP_CREATE_SAMPLE_PHP=FALSE \
@@ -24,8 +25,8 @@ ENV FREESCOUT_VERSION=${FREESCOUT_VERSION:-"1.8.81"} \
     PHP_ENABLE_SIMPLEXML=TRUE \
     PHP_ENABLE_TOKENIZER=TRUE \
     PHP_ENABLE_ZIP=TRUE \
-    IMAGE_NAME="tiredofit/freescout" \
-    IMAGE_REPO_URL="https://github.com/tiredofit/docker-freescout/"
+    IMAGE_NAME="minocraft/freescout" \
+    IMAGE_REPO_URL="https://github.com/totake0224/docker-freescout/"
 
 RUN source /assets/functions/00-container && \
     set -x && \
